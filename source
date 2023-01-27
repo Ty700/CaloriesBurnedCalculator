@@ -1,0 +1,31 @@
+/*
+* Simple calculator for the amount of calories burned given a user's age, weight, average heart rate, and total time exercising
+* Author: Tyler Scotti
+*/
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+   int ageYrs;
+   int tMins;
+   double weightLbs;
+   double heartRate;
+   double totCalories;
+   cout << fixed << setprecision(2);
+   
+   cout << "Enter your age: ";
+      cin >> ageYrs;
+   cout << "Enter your weight in pounds (lb): ";
+      cin >> weightLbs;
+   cout << "Enter your average heart rate (BPM): ";
+      cin >> heartRate;
+   cout << "Enter in the amount of time elapsed during exercising (mins): ";
+      cin >> tMins;
+   
+   totCalories = ((ageYrs * 0.2757) + (weightLbs * 0.03295) + (heartRate * 1.0781) - 75.4991) * (tMins / 8.368);
+   
+   cout << "Calories Burned: " << totCalories << endl;
+   return 0;
+}
